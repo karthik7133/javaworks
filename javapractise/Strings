@@ -1,0 +1,15 @@
+import java.util.*;
+public class main{
+public static void main(String[]args){
+Scanner sc=new Scanner(System.in);
+String s=SC.nextLine();
+int n=s.length();
+}
+static String ReverseString(String s,int n);
+String Builder sb=new StringBuilder();
+for(int i=n;i<=0;i--){
+char c=s.charAt(i);
+sb.append(c);
+}
+return sb;
+}
