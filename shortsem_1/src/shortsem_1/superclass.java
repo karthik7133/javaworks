@@ -25,10 +25,10 @@ class child extends parent{
 	child(int a,int b){
 		super(a,b);
 	}
-	 public int method() {
-		return a+b;
-	}
-	 void add() {
-		 System.out.println("this is child method");
-	 }
+//	 public int method() {
+//		return a+b;
+//	}
+//	 void add() {
+//		 System.out.println("this is child method");
+//	 }
 }
