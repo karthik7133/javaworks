@@ -1,6 +1,12 @@
 package labwork;
 
 public class lab_4_2 {
+	public static void main(String[] args) {
+		calculate c=new calculate();
+		c.add(3, 4,5);
+		c.sub(4,3,2);
+		c.div(2.0,3.0);
+	}
 
 }
 class calculator{

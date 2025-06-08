@@ -6,6 +6,7 @@ public class shape1 {
 		c.display();
 		rectangle r=new rectangle(2,3,4);
 		r.display();
+	
 	}
 	
 
