@@ -8,8 +8,6 @@ public class shape1 {
 		r.display();
 	
 	}
-	
-
 }
 class shape2{
 	int a;

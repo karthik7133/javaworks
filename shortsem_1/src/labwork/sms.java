@@ -10,6 +10,9 @@ public class sms {
 //		a.toArray().toString();
 //		System.out.println(a);
 		int total=0;
+		for (String k:student.keySet()) {
+			System.out.println(k);
+		}
 		for(int s:student.values()) {
 			total+=s;
 		}
