@@ -5,37 +5,29 @@ public class StringToInt {
         String a = " -032";
         System.out.println(myAtoi(a));
     }
+    public static int myAtoi(String a) {
+        if (a == null || a.isEmpty()) return 0;
 
-    public static int myAtoi(String s) {
-        if (s == null || s.isEmpty()) return 0;
-        
-        int index = 0;
-        int sign = 1;
-        int result = 0;
-        
-        while (index < s.length() && s.charAt(index) == ' ') {
-            index++;
-        }
-        
-        if (index >= s.length()) return 0;
-        
+        a = a.trim();
+        if (a.isEmpty()) return 0;
 
-        if (s.charAt(index) == '+' || s.charAt(index) == '-') {
-            sign = s.charAt(index) == '-' ? -1 : 1;
-            index++;
-        }
-        
-        while (index < s.length() && Character.isDigit(s.charAt(index))) {
-            int digit = s.charAt(index) - '0';
+        int sign = 1, i = 0, n = a.length();
+        long num = 0;
 
-            if (result > (Integer.MAX_VALUE - digit) / 10) {
-                return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
-            }
-            
-            result = result * 10 + digit;
-            index++;
+        if (i < n && (a.charAt(i) == '+' || a.charAt(i) == '-')) {
+            if (a.charAt(i) == '-') sign = -1;
+            i++;
         }
-        
-        return sign * result;
+
+        while (i < n && Character.isDigit(a.charAt(i))) {
+            num = num * 10 + (a.charAt(i) - '0');
+            if (sign == 1 && num > Integer.MAX_VALUE) 
+                return Integer.MAX_VALUE;
+            if (sign == -1 && -num < Integer.MIN_VALUE)
+                return Integer.MIN_VALUE;
+            i++;
+        }
+
+        return (int)(sign * num);
     }
 }
