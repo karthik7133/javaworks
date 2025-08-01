@@ -10,6 +10,7 @@ public class linkedlist {
 		l.displaydata();
 		l.deleteatindex(2);
 		l.displaydata();
+		System.out.println("hi");
 	}
 	
 }
@@ -43,19 +44,33 @@ class list{
 		}
 	}
 	public void deleteatindex(int a) {
+		if (first == null) {
+	        System.out.println("List is empty. Cannot delete.");
+	        return;
+	    }
 		int len=0;
 		card temp=first;
 		while(temp!=null) {
 			len++;
 			temp=temp.next;
 		}
+		if (a == len) { 
+	        first = first.next;
+	        return;
+	    }
+		if (a <= 0 || a > len) {
+	        System.out.println("Invalid position 'n'. Cannot delete.");
+	        return;
+	    }
 		System.out.println(len);
 		int delindex=len-a-1;
 		temp=first;
 		for(int i=0;i<delindex;i++) {
 			temp=temp.next;
 		}
-		temp.next=temp.next.next;
+		if (temp.next != null) {
+	        temp.next = temp.next.next; 
+	    }
 	}
 	
 }
