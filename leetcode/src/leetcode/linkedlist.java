@@ -5,6 +5,10 @@ public class linkedlist {
 		list l=new list();
 		l.adddata(10);
 		l.adddata(20);
+		l.adddata(30);
+		l.adddata(40);
+		l.displaydata();
+		l.deleteatindex(2);
 		l.displaydata();
 	}
 	
@@ -37,6 +41,21 @@ class list{
 			else System.out.println(temp.data+"->null");
 			temp=temp.next;
 		}
+	}
+	public void deleteatindex(int a) {
+		int len=0;
+		card temp=first;
+		while(temp!=null) {
+			len++;
+			temp=temp.next;
+		}
+		System.out.println(len);
+		int delindex=len-a-1;
+		temp=first;
+		for(int i=0;i<delindex;i++) {
+			temp=temp.next;
+		}
+		temp.next=temp.next.next;
 	}
 	
 }
