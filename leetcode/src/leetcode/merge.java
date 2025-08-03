@@ -3,9 +3,21 @@ package leetcode;
 public class merge {
 	public static void main(String[] args) {
 		solution1 s=new solution1();
-		s.add(10);s.add(20);s.add(30);
-		s.addatpos(0, 7);
-		s.display();
+		solution1 s2=new solution1();
+		s2.add(1);s2.add(3);s2.add(4);s2.add(5);;
+		s.add(1);s.add(2);s.add(4);
+		int len1=0,len2=0;
+		len1=s.len(s.front, len1);len2=(s2.len(s2.front, len2));
+		int max=(len1>len2)?len1:len2;
+		solution1 maxlist=(len1>len2)?s:s2;
+		ListNode temp=maxlist.front;
+		ListNode temp2=((len1<len2)?s:s2).front;
+		for(int i=0;i<max;i++) {
+			if(temp2.val<=temp.val) {
+				maxlist.addatpos(i, temp2.val);
+			}temp=temp.next;temp2=temp2.next;
+		}
+		maxlist.display();
 	}
 }
 class solution1{
@@ -34,17 +46,21 @@ class solution1{
 		System.out.println("null");
 		
 	}
+	public int len(ListNode head,int len) {
+		ListNode temp=head;
+		while(temp!=null) {
+			len++;temp=temp.next;
+		}return len;
+	}
 	public void addatpos(int pos,int data) {
 		ListNode a=new ListNode(data);
-		if(front==null) {
-			front=a;
-			return;
+		if(pos==0) {
+			a.next=front;front=a;return;
 		}
-		ListNode temp1=front;
-		while(pos!=0) {
-			temp1=temp1.next;
-			pos--;
-		}
-		temp1.next=a;a.next=temp1.next.next;
+		ListNode temp=front;
+		for(int i=0;i<pos-1;i++) {
+			temp=temp.next;
+		}a.next=temp.next;
+		temp.next=a;
 	}
 }
