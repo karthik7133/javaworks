@@ -4,12 +4,15 @@ import java.util.Arrays;
 
 public class missingpositvr {
 	public static void main(String[] args) {
-		int a[]= {1,2,3,5};
+		int a[] = {1,2,3,5};
+		
 		if (a.length == 0) {
             System.out.println(1);
             return;
         }
-		Arrays.sort(a);
+		
+		Arrays.sort(a); 
+		
 		int f = 0;
         while (f < a.length && a[f] <= 0) {
             f++;
@@ -18,14 +21,16 @@ public class missingpositvr {
 			System.out.println(1);
 			return;
 		}
-		for(int i=1;i<a.length;i++) {
+		
+		for(int i = f + 1; i < a.length; i++) {
 			if (a[i] == a[i-1]) {
                 continue; 
             }
-			if(a[i-1]+1!=a[i] && a[i-1]>0) {
-				System.out.println(a[i-1]+1);
-				break;
+			if (a[i-1] + 1 != a[i]) {
+				System.out.println(a[i-1] + 1);
+				return; 
 			}
 		}
+		System.out.println(a[a.length - 1] + 1);
 	}
 }
