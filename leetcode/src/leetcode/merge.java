@@ -6,18 +6,6 @@ public class merge {
 		solution1 s2=new solution1();
 		s2.add(1);s2.add(3);s2.add(4);s2.add(5);;
 		s.add(1);s.add(2);s.add(4);
-		int len1=0,len2=0;
-		len1=s.len(s.front, len1);len2=(s2.len(s2.front, len2));
-		int max=(len1>len2)?len1:len2;
-		solution1 maxlist=(len1>len2)?s:s2;
-		ListNode temp=maxlist.front;
-		ListNode temp2=((len1<len2)?s:s2).front;
-		for(int i=0;i<max;i++) {
-			if(temp2.val<=temp.val) {
-				maxlist.addatpos(i, temp2.val);
-			}temp=temp.next;temp2=temp2.next;
-		}
-		maxlist.display();
 	}
 }
 class solution1{
@@ -63,4 +51,24 @@ class solution1{
 		}a.next=temp.next;
 		temp.next=a;
 	}
+	public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        ListNode dummy = new ListNode(0);
+        ListNode tail = dummy;
+        while (list1 != null && list2 != null) {
+            if (list1.val <= list2.val) {
+                tail.next = list1;
+                list1 = list1.next;
+            } else {
+                tail.next = list2;
+                list2 = list2.next;
+            }
+            tail = tail.next;
+        }
+        if (list1 != null) {
+            tail.next = list1;
+        } else if (list2 != null) {
+            tail.next = list2;
+        }
+        return dummy.next;
+    }
 }
