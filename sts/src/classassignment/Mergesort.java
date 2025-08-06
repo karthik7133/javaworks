@@ -34,8 +34,8 @@ public class Mergesort {
 		while(index2<=end) {
 			merged[x++]=a[index2++];
 		}
-		for(int i=0,j=st;i<merged.length;i++,j++) {
-			a[j]=merged[i];
+		for(int i=0;i<merged.length;i++) {
+			a[st++]=merged[i];
 		}
 		System.out.println(Arrays.toString(a));
 		
