@@ -2,8 +2,15 @@ package classassignment;
 
 public class segmentedsieve {
 	public static void main(String[] args) {
-		int h=4;
-		int l=2;
+		int h=11;
+		int l=1;
+		int a[]= {2,3,5,7};
+		if(l<=7) {
+			for(int i :a ) {
+				if(h>i && i>=l)System.out.println(i);break;
+			}
+			
+		}
 		boolean []b=new boolean[h-l+1];
 		for(int i=2;i<=Math.sqrt(h);i++) {
 			int sm=(l/i)*i;
