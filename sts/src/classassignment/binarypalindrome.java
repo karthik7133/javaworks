@@ -12,5 +12,12 @@ public class binarypalindrome {
 				f=false;break;
 			}
 		}System.out.println(f);
+		/*
+		 * while(n>0){
+		 * s1=s1+n%2
+		 * s2=n%2+s2
+		 * n/=2;     */
+		
 	}
+	
 }
