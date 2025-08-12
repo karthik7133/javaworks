@@ -7,37 +7,34 @@ public class Mergesort {
 		int a[]= {10,2,30,9,7,19};
 		int len=a.length;
 		devide(a,0,len-1);
-	}
-
-	private static void devide(int[] a, int st, int end) {
-		if(st<end) {
-			int mid=st+(end-st)/2;
-			devide(a,st,mid);
-			devide(a,mid+1,end);
-			merge(a,st,mid,end);
-		}
-	}
-
-	private static void merge(int[] a, int st, int mid, int end) {
-		int merged[]=new int[(end-st)+1];
-		int index1=st;
-		int index2=mid+1;
-		int x=0;
-		while(index1<=mid && index2<=end ) {
-			if(a[index1]<=a[index2]) {
-				merged[x++]=a[index1++];
-			}else merged[x++]=a[index2++];
-		}
-		while(index1<=mid) {
-			merged[x++]=a[index1++];
-		}
-		while(index2<=end) {
-			merged[x++]=a[index2++];
-		}
-		for(int i=0;i<merged.length;i++) {
-			a[st++]=merged[i];
-		}
 		System.out.println(Arrays.toString(a));
+	}
+
+	private static void devide(int[] a, int i, int j) {
+		if(i<j) {
+			int mid=i+(j-i)/2;
+			devide(a,i,mid);
+			devide(a,mid+1,j);
+			merge(a,i,mid,j);
+		}
 		
 	}
+
+	private static void merge(int[] a, int i, int mid, int j) {
+		int m[]=new int[j-i+1];
+		int x=0,ind1=i,ind2=mid+1;
+		while(ind1<=mid && ind2<=j) {
+			if(a[ind1]<=a[ind2]) {
+				m[x++]=a[ind1++];
+			}else m[x++]=a[ind2++];
+		}while(ind1<=mid) {
+			m[x++]=a[ind1++];
+		}while(ind2<=j) {
+			m[x++]=a[ind2++];
+		}
+		for(int k=0;k<m.length;k++) {
+			a[i++]=m[k];
+		}
+	}
+	
 }
