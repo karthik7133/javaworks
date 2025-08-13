@@ -2,7 +2,7 @@ package classassignment;
 
 public class shortsum {
 	public static void main(String[] args) {
-		int[] a= {12,-14,23,32,50};
+		int[] a= {12,5,14,-23,32,50};
 		int target=5;
 		int min=Integer.MAX_VALUE;
 		int f=-1;
