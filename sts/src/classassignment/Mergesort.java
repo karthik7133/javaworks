@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Mergesort {
 	public static void main(String[] args) {
-		int a[]= {10,2,30,9,7,19};
+		int a[]= {23,54,10,2,30,9,7,19};
 		int len=a.length;
 		devide(a,0,len-1);
 		System.out.println(Arrays.toString(a));
