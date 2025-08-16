@@ -21,8 +21,6 @@ class Process {
 public class srj {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // Input section
         System.out.print("Enter number of processes: ");
         int n = sc.nextInt();
 
@@ -63,15 +61,16 @@ public class srj {
                 current.wt = current.tat - current.bt;
             }
         }
+        System.out.printf("%-15s %-15s %-15s %-15s %-15s %-15s%n",
+                "Process", "ArivalTime", "BurstTime", "CompleteTime", "TAT", "WT");
 
-        // Display output
-        System.out.println("\nP\tAT\tBT\tCT\tTAT\tWT");
         int totalTAT = 0, totalWT = 0;
         for (Process p : processes) {
             totalTAT += p.tat;
             totalWT += p.wt;
-            System.out.println("P" + p.id + "\t" + p.at + "\t" + p.bt + "\t" +
-                               p.ct + "\t" + p.tat + "\t" + p.wt);
+            System.out.printf("%-15s %-15d %-15d %-15d %-15d %-15d%n",
+                    "P" + p.id, p.at, p.bt, p.ct, p.tat, p.wt);
+
         }
 
         System.out.println("\nAverage TAT = " + (double) totalTAT / n);
