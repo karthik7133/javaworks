@@ -4,16 +4,13 @@ import java.util.*;
 
 class ChineseRemainder {
     int calculate(int size, int div[], int rem[]) {
-        int j, x = 1;
-        while (true) {
-            for (j = 0; j < size; j++) {
-                if (x % div[j] != rem[j]) {
-                    break;
-                }
-            }
-            if (j == size)
-                return x;
-            x++;
+        int j,x=1;
+        while(true) {
+        	for(j=0;j<size;j++) {
+        		if(x%div[j]!=rem[j])break;
+        	}
+        	if(j==size)return x;
+        	x++;
         }
     }
 }
