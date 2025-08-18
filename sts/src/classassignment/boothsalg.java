@@ -3,7 +3,7 @@ package classassignment;
 public class boothsalg {
 	public static void main(String[] args) {
 		int a=2;
-		int b=0;
+		int b=3;
 		int p=0;
 		int len=Integer.toBinaryString(a).length();
 		for(int i=0;i<len;i++) {
