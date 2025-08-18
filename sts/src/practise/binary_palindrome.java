@@ -8,12 +8,13 @@ public class binary_palindrome {
 		System.out.println(ispalindrome(num));
 	}
 	public static boolean ispalindrome(int n) {
-		int rev=0;
-		int temp=n;
-		while(temp!=0) {
-			rev=(rev<<1)|(temp&1);
-			temp>>=1;
+		String s1="";
+		String s2="";
+		while(n!=0) {
+			s1+=n%2;
+			s2=n%2+s2;
+			n/=2;
 		}
-		return n==rev;
+		return (s1.equals(s2));
 	}
 }
