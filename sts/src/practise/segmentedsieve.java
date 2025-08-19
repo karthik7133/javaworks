@@ -13,7 +13,7 @@ public class segmentedsieve {
 			}
 		}
 		for(int i=1;i<h-l+1;i++) {
-			if(!b[i])System.out.println(l+i+" ");
+			if(!b[i] & i>1)System.out.println(l+i+" ");
 		}
 	}
 }
