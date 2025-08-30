@@ -1,22 +1,22 @@
 package lab_work;
 import java.util.*;
 
-class Process {
-    int id;     // Process ID
-    int at;     // Arrival Time
-    int bt;     // Burst Time
-    int rt;     // Remaining Time
-    int ct;     // Completion Time
-    int tat;    // Turnaround Time
-    int wt;     // Waiting Time
-
-    Process(int id, int at, int bt) {
-        this.id = id;
-        this.at = at;
-        this.bt = bt;
-        this.rt = bt;  // Initially remaining = burst
-    }
-}
+//class Process {
+//    int id;     // Process ID
+//    int at;     // Arrival Time
+//    int bt;     // Burst Time
+//    int rt;     // Remaining Time
+//    int ct;     // Completion Time
+//    int tat;    // Turnaround Time
+//    int wt;     // Waiting Time
+//
+//    Process(int id, int at, int bt) {
+//        this.id = id;
+//        this.at = at;
+//        this.bt = bt;
+//        this.rt = bt;  // Initially remaining = burst
+//    }
+//}
 
 public class srj {
     public static void main(String[] args) {
