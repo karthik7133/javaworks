@@ -7,6 +7,7 @@ public class swap_nibble {
 		int n=x.nextInt();
 		System.out.println((n&240)>>4|(n&15)<<4);
 		System.out.println((n&0xf0)>>4|(n&0x0f)<<4);
+		System.out.println((n%16)*16+n/16);
 		
 	}
 }
