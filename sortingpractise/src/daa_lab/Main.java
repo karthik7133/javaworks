@@ -7,38 +7,38 @@ public class Main {
 		List<List<Edge>>graph=new ArrayList<>();
 		for(int i=0;i<n;i++) {
 			graph.add(new ArrayList<>());
-		}for(int i=0;i<m;i++) {
+		}
+		for(int i=0;i<m;i++) {
 			int r1=x.nextInt();
 			int r2=x.nextInt();
 			int t=x.nextInt();
 			graph.get(r1).add(new Edge(r2,t));
 			graph.get(r2).add(new Edge(r1,t));
 		}
-		int s=x.nextInt(),d=x.nextInt();
-		dijkstra(n,graph,s);
+		int src=x.nextInt();int des=x.nextInt();
+		dijkstra(n,graph,src);
 	}
 	static class Edge{
 		int to,time;
-		public Edge(int to,int time) {
-			this.to=to;
-			this.time=time;
+		public Edge(int t,int q) {
+			this.to=t;this.time=q;
 		}
 	}
-	public static void dijkstra(int n,List<List<Edge>> graph,int src) {
-		int dis[]=new int [n];
-		Arrays.fill(dis, Integer.MAX_VALUE);
+	public static void dijkstra(int n,List<List<Edge>>graph,int src) {
+		int dis[]=new int[n];
+		Arrays.fill(dis,Integer.MAX_VALUE);
 		dis[src]=0;
 		PriorityQueue<int []> pq=new PriorityQueue<>(Comparator.comparing(a->a[1]));
 		pq.offer(new int[] {src,0});
 		while(!pq.isEmpty()) {
-			int curr[]=pq.poll();
+			int [] curr=pq.poll();
 			int node=curr[0],d=curr[1];
 			if(d>dis[node])continue;
 			for(Edge e:graph.get(node)) {
-				int next=e.to,newdis=e.time;
-				if(newdis<dis[next]) {
-					dis[next]=newdis;
-					pq.offer(new int[] {next,newdis});
+				int next=e.to,newd=d+e.time;
+				if(newd<dis[next]) {
+					dis[next]=newd;
+					pq.offer(new int [] {next,newd});
 				}
 			}
 		}for(int i=0;i<n;i++) {
