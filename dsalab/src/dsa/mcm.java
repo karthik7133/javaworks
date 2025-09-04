@@ -1,21 +1,18 @@
 package dsa;
 import java.util.*;
 public class mcm {
-	static int [] [] dp,split;
-	static int[]p;
-	public static void main(String []ar) {
+	static int[] [] dp, split;
+	static int []p;
+	public static void main(String [] ar) {
 		Scanner x=new Scanner(System.in);
 		int n=x.nextInt();
 		p=new int[n];
-		for(int i=0;i<n;i++) {
-			p[i]=x.nextInt();
-		}
-		dp=new int[n][n];split =new int[n][n];
-		for(int [] row :dp) {
-			Arrays.fill(row, -1);
-		}
-		int count=solve(1,n-1);
-		System.out.println(count);
+		for(int i=0;i<n;i++)p[i]=x.nextInt();
+		dp=new int[n][n];
+		split=new int [n][n];
+		for(int [] row :dp)Arrays.fill(row, -1);
+		int cost=solve(1,n-1);
+		System.out.println(cost);
 		System.out.println(build(1,n-1));
 	}
 	private static String build(int i, int j) {
