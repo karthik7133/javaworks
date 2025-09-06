@@ -1,10 +1,14 @@
 package classassignment;
 
+import java.util.Arrays;
+
 public class segmentedsieve {
 	public static void main(String[] args) {
-		int h=11;
+		int h=5;
 		int l=1;
 		boolean []b=new boolean[h-l+1];
+		
+	
 		for(int i=2;i<=Math.sqrt(h);i++) {
 			int sm = Math.max(i * i, ((l + i - 1) / i) * i);
 			if(sm<l)sm+=i;
@@ -13,9 +17,13 @@ public class segmentedsieve {
 				b[j-l]=true;
 			}
 		}
-		for(int i=1;i<h-l+1;i++) {
+		System.out.println(Arrays.toString(b));
+		for(int i=0;i<h-l+1;i++) {
 			if (!b[i] ) {
-                System.out.print((l + i) + " ");
+				if((l+i)!=1) {
+					System.out.print((l + i) + " ");
+				}
+                
             }
 		}
 	}
