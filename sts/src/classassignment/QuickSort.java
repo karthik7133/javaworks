@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class QuickSort {
 	public static void main(String[] args) {
-		int[] arr = {10, 7, 8, 9, 1, 5};
+		int[] arr = {12,4,5,8,9,15};
         int n = arr.length;
       
         devide(arr, 0, n - 1);
@@ -29,9 +29,9 @@ public class QuickSort {
 		return i+1;
 	}
 	public static void swap(int a[],int i,int j) {
-		a[i]^=a[j];
-		a[j]^=a[i];
-		a[i]^=a[j];
+		int temp=a[i];
+		a[i]=a[j];
+		a[j]=temp;
 	}
 }
 
