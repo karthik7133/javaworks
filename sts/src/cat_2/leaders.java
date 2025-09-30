@@ -3,6 +3,8 @@ import java.util.*;
 public class leaders {
 	public static void main(String [] ar){
         //leaders in an array..
+		//reverse order o(1);
+		//straight order O(n);
         Scanner x=new Scanner(System.in);
         int n=x.nextInt();
         int a[]=new int[n];
