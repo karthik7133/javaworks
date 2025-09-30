@@ -2,7 +2,9 @@ package cat_2;
 import java.util.*;
 public class hour_glass {
 	public static void main(String[] args) {
-		//(r-2)*(c-2);
+		//no of hr glasses=(r-2)*(c-2);
+		//how many elements in a hr glass =7;
+		
 		Scanner x=new Scanner(System.in);
 		int r=x.nextInt();
 		int c=x.nextInt();
