@@ -9,7 +9,7 @@ public class majority {
 		   a[i]=x.nextInt();
 		}
 		//boyer moore voting
-		//space: O(n);
+		//space: O(1);
 		//time: O(n);
 		//strictly greater than n/2;
 		int count=0;int p=0;
