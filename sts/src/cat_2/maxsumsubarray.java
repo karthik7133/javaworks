@@ -3,7 +3,8 @@ import java.util.*;
 public class maxsumsubarray {
 	static Scanner x= new Scanner(System.in);
 	public static void main(String[] args) {
-	     
+	     //no of sub arrays n(n+1)/2;
+		//time O(n);space O(1);
 	     int n=x.nextInt();
 	     int a[]= new int [n];
 	     for(int i=0;i<n;i++)a[i]=x.nextInt();
