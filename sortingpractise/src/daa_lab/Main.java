@@ -11,7 +11,7 @@ public class Main {
 		for(int i=0;i<m;i++) {
 			int r1=x.nextInt();
 			int r2=x.nextInt();
-			int t=x.nextInt();
+			int t =x.nextInt();
 			graph.get(r1).add(new Edge(r2,t));
 			graph.get(r2).add(new Edge(r1,t));
 		}
