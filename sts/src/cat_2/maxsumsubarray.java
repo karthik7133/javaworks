@@ -11,24 +11,12 @@ public class maxsumsubarray {
 	     int max=Integer.MIN_VALUE;
 	     for(int i=0;i<n;i++){
 	         int p=1;
-	         for(int j=i;j<n;j++){
-	             p=p*a[j];
+	         for(int j=0;j<n;j++){
+	             p*=a[j];
 	             max=Math.max(p,max);
 	         }
 	     }System.out.println(max);
 	 }
-	//bruteforce..
-	public void bruteforce() {
-		 int n=x.nextInt();
-	        int a[]= new int [n];
-	        for(int i=0;i<n;i++)a[i]=x.nextInt();
-	        int max=Integer.MIN_VALUE;
-	        for(int i=0;i<n;i++){
-	            int p=1;
-	            for(int j=i;j<n;j++){
-	                p=p*a[j];
-	                max=Math.max(p,max);
-	            }
-	        }System.out.println(max);
-	}
+	
+	
 }
