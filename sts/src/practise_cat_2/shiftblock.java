@@ -7,25 +7,22 @@ public class shiftblock {
 		int a[]=new int[n];
 		for(int i=0;i<n;i++)a[i]=x.nextInt();
 		int r=x.nextInt();
-		
+		r=n-(r%n);
 		rev(0,r-1,a);
 		rev(r,n-1,a);
 		rev(0,n-1,a);
-		
-		
 		System.out.println(Arrays.toString(a));
-		
 	}
-	static void rev(int l,int r,int [] a) {
+	static void rev(int l,int r,int a[]) {
 		while(l<r) {
-			swap(l,r,a);
-			l++;r--;
+			swap(l,r,a);l++;r--;
 		}
 	}
-	static void swap(int a1,int b1,int a[]) {
-		int temp=a[a1];
-		a[a1]=a[b1];
-		a[b1]=temp;
+	static void swap(int l,int r,int a[]) {
+		int temp=a[l];
+		a[l]=a[r];
+		a[r]=temp;
 	}
+	
 	
 }
