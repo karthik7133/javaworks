@@ -13,15 +13,14 @@ public class wtsubstring {
 	public static void wtstring(String s1,String s2,int k,int n) {
 		HashSet<String> hs=new HashSet<>();
 		for(int i=0;i<n;i++) {
-			int sum =0;String s="";
+			int sum=0;String s="";
 			for(int j=i;j<n;j++) {
 				int pos=s1.charAt(j)-'a';
 				int wt=s2.charAt(pos)-'0';
-				sum+=wt;
-				s+=s1.charAt(j);
+				s+=s1.charAt(j);sum+=wt;
 				if(sum<=k)hs.add(s);
 				else break;
 			}
-		}System.out.println(hs.size());
+		}
 	}
 }
