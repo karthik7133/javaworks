@@ -11,7 +11,7 @@ public class maxsumsubarray {
 	     int max=Integer.MIN_VALUE;
 	     for(int i=0;i<n;i++){
 	         int p=1;
-	         for(int j=0;j<n;j++){
+	         for(int j=i;j<n;j++){
 	             p*=a[j];
 	             max=Math.max(p,max);
 	         }
