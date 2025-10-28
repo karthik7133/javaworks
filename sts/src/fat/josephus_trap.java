@@ -1,21 +1,23 @@
 package fat;
 import java.util.*;
+
 public class josephus_trap {
-	public static void main(String[] args) {
-		List<Integer>l=new ArrayList<>();
-		Scanner x = new Scanner(System.in);
-		int n=x.nextInt();
-		for(int i=0;i<n;i++) {
-			l.add(i);
-		}
-		int r=x.nextInt();
-		int index = 0;
-        while(l.size() > 1) {
-            index = (index + r - 1) % l.size();
-            l.remove(index);
-        }
+    public static void main(String[] args) {
+        List<Integer> l = new ArrayList<>();
+        Scanner x = new Scanner(System.in);
+        int n = x.nextInt();
+        int r = x.nextInt(); 
         
-        System.out.println(l.get(0));
-		
-	}
+        
+        int survivor = josephus(n, r);
+        System.out.println("Survivor: " + survivor);
+    }
+    
+    static int josephus(int n, int r) {
+        int survivor = 0;
+        for(int i = 2; i <= n; i++) {
+            survivor = (survivor + r) % i;
+        }
+        return survivor + 1; 
+    }
 }
