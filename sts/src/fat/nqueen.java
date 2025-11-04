@@ -22,7 +22,7 @@ public class nqueen {
 				sol[i][c]=1;//if it is safe to place queen then use '1';
 				if(path(n,sol,c+1))return true;
 				sol[i][c]=0;//if we can't place queen use '0';
-			}
+			}//hi
 		}
 		return false;
 	}
