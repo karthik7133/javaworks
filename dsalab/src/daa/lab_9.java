@@ -10,7 +10,7 @@ public class lab_9 {
 	            graph.add(new ArrayList<>());
 	        }
 	        for(int i=0;i<m;i++){
-	            int r1=x.nextInt();
+	            int r1=x.nextInt(); 
 	            int r2=x.nextInt();
 	            int t =x.nextInt();
 	            graph.get(r1).add(new Edge(r2,t));

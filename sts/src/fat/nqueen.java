@@ -22,15 +22,15 @@ public class nqueen {
 				sol[i][c]=1;//if it is safe to place queen then use '1';
 				if(path(n,sol,c+1))return true;
 				sol[i][c]=0;//if we can't place queen use '0';
-			}//hi
+			}
 		}
 		return false;
 	}
 
 	private static boolean safe(int[][] sol, int r, int c) {
-		for(int i=0;i<c;i++) if(sol[r][i]==1)return false;//row checking;
+		for(int i=0;i<c;i++) if(sol[r][i]==1)return false;//column checking;
 		for(int i=r,j=c;i>=0&&j>=0;i--,j--) if(sol[i][j]==1)return false;//upper left diagonal
-		for(int i=r,j=c;i<sol.length&& j>=0;i++,j--)if(sol[i][j]==1)return false;//lower left diagonal checking
+		for(int i=r,j=c;i<sol.length&& j>=0;i++,j--)if(sol[i][j]==1)return false;//upper right diagonal checking
 		
 		
 		return true;
