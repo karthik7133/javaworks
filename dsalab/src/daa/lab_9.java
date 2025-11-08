@@ -2,7 +2,6 @@ package daa;
 // You are using Java
 import java.util.*;
 public class lab_9 {
-
 	    public static void main(String [] ar){
 	        Scanner x = new Scanner (System.in);
 	        int n =x.nextInt(),m=x.nextInt();
