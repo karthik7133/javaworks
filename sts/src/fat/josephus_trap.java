@@ -1,6 +1,9 @@
 package fat;
 import java.util.*;
-
+//maze solving.
+//two directions forward and backward
+//appraoach recusion and backtracking 
+//i/p array and give the o.p :path
 public class josephus_trap {
     public static void main(String[] args) {
         List<Integer> l = new ArrayList<>();
