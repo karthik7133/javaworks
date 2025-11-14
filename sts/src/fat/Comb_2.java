@@ -1,4 +1,9 @@
 package fat;
+//no. of comb =ncr=n!/(n-r)!*r!.
+//time and space complexities.
+//give array value and target sum +>no of comb possible.
+//ex:[2,3,5,7] target sum=8,o/p:[[2,2,2,2],[3,3,2],[3,5]; or 3
+
 import java.util.Scanner;
 class Comb_2{
     static void comb(int n,int a[],int r,int idx,int c[],int i){
