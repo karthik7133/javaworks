@@ -1,5 +1,11 @@
 package fat;
 import java.util.*;
+//time and space
+//to place n queens in n*n matrix without attacking each other.
+//in how many ways they attack each other 3 ways row column and diagonal.
+//input n queens o/p placing n queens path
+//min 4*4 matrix.
+//approach recursive backtracking (backtracking);
 public class nqueen {
 	public static void main(String[] args) {
 		Scanner x = new Scanner(System.in);
