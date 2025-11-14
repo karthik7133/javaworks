@@ -1,5 +1,8 @@
 package fat;
-
+//no of permutations =>n!
+//t.c and s.c.
+//i/p string output=> no of permutations or what are permutations.
+//
 public class permutations {
 
     // Function to print all permutations
