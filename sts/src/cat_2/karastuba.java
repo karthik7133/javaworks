@@ -1,5 +1,9 @@
 package cat_2;
-
+//multiplication of 2 lage nums.
+//t.c =O(n^1.585),s.c
+//karastuba in code questions
+//what is data type of inputs we will take => long.
+//approach => divide and conquer
 import java.util.Scanner;
 
 public class karastuba {
