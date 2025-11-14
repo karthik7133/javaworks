@@ -1,4 +1,7 @@
 package cat_2;
+//given weights and string and k value we need to find no of sub strings with weight<= k.
+//time and space complexities
+//getting the pos of char and based on pos getting the weight.
 
 import java.util.*;
 class wtsubstring{
