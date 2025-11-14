@@ -1,5 +1,9 @@
 package fat;
 import java.util.*;
+//t.c and s.c
+//efficient =>center expansion with mirrors
+//in code questions
+
 public class longest_palindromic {
 	public static void main(String[] args) {
 		Scanner x= new Scanner(System.in);
@@ -20,7 +24,6 @@ public class longest_palindromic {
 			p[i]=0;
 			while(i+p[i]+1<n&&i-p[i]-1>=0&&ch[i+p[i]+1]==ch[i-p[i]-1]) {
 				p[i]++;
-				
 			}
 			if(p[i]>ml) {
 				ml=p[i];	
