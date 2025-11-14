@@ -1,4 +1,8 @@
 package cat_2;
+//time and space complexity
+//in-place sorting algorithm
+//less swaps are req in selection sort.
+//selecting the min value in entire array and fix it's pos.
 import java.util.*;
 public class selection_sort {
 	public static void main(String[] args) {
