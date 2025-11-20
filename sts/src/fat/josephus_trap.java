@@ -6,7 +6,6 @@ import java.util.*;
 //i/p array and give the o.p :path
 public class josephus_trap {
     public static void main(String[] args) {
-        List<Integer> l = new ArrayList<>();
         Scanner x = new Scanner(System.in);
         int n = x.nextInt();
         int r = x.nextInt(); 
