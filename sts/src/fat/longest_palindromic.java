@@ -1,5 +1,5 @@
 package fat;
-import java.util.*;
+/*import java.util.*;
 //t.c and s.c
 //efficient =>center expansion with mirrors
 //in code questions
@@ -32,12 +32,10 @@ public class longest_palindromic {
 		}int si=(ci-ml)/2;
 		return a.substring(si,si+ml);
 	}
-}
-/*
- * package daa;
+}*/
 import java.util.*;
 
-public class lab_7 {
+public class longest_palindromic {
     public static void main(String ar[]) {
         Scanner x = new Scanner(System.in);
         String a = x.next();
@@ -73,4 +71,4 @@ public class lab_7 {
         return right - left - 1;
     }
 }
- */
+ 
