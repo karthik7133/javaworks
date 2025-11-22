@@ -3,7 +3,7 @@ import java.util.*;
 public class comb {	
 	public static void main(String[] args) {
 		Scanner x = new Scanner(System.in);
-		String s =x.next();
+		String s = x.next();
 		int n=x.nextInt();
 		c(s,0,"",n);
 	}
@@ -11,8 +11,8 @@ public class comb {
 		if(current.length()==n) {
 			System.out.println(current);return;
 		}
-		for(int i=k;i<s.length();i++) {
+		for(int i=k;i<s.length();i++) 
 			c(s,i+1,current+s.charAt(i),n);
-		}
+		
 	}
 }

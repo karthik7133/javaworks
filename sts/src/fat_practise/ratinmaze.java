@@ -13,7 +13,7 @@ public class ratinmaze {
 				mat[i][j]=x.nextInt();
 			}
 		}
-		if(rat(mat ,0,0,res)) {
+		if(rat(0,0,res)) {
 			for(int i=0;i<n;i++) {
 				for(int j=0;j<m;j++) {
 					System.out.print(res[i][j]+" ");

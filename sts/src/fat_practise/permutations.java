@@ -6,14 +6,15 @@ public class permutations {
 		Scanner x = new Scanner(System.in);
 		String s=x.next();
 		p(s,"");
-		System.out.println("Number of permutations: "+set.size());
+		System.out.println(set.size());
 		for(String k:set) {
 			System.out.print(k+" ");
 		}
 	}
 	static void p(String s,String ans) {
 		if(s.length()==0) {
-			set.add(ans);return;
+			set.add(ans);
+			return;
 		}
 		for(int i=0;i<s.length();i++) {
 			String r=s.substring(0,i)+s.substring(i+1);
