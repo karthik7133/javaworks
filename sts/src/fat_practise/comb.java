@@ -12,7 +12,7 @@ public class comb {
 			System.out.println(current);return;
 		}
 		for(int i=k;i<s.length();i++) 
-			c(s,i+1,current+s.charAt(i),n);
+		c(s,i+1,current+s.charAt(i),n);
 		
 	}
 }
