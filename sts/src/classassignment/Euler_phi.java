@@ -7,12 +7,11 @@ public class Euler_phi {
 			if(a%i==0) {
 				while(a%i==0) {
 					a/=i;
-				}temp=temp*(1.0-(1.0/i));
+				}temp-=temp/i;
 				
-			}System.out.println(i+" ");
-		}if(a>2) {
-			temp=temp*(1.0-(1.0/a));
-			System.out.println(a+" ");
+			}
+		}if(a>1) {
+			temp-=temp/a;
 
 		}
 			
