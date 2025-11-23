@@ -1,7 +1,12 @@
 package classassignment;
 
 import java.util.Arrays;
-
+//approach = divide and conquer.
+//array after 3 iteration.
+//t.c and s.c => best avg,worst 
+//in-place sorting 
+//pivot element can be any element in array.
+//pivot conditions they can ask left small right big.
 public class QuickSort {
 	public static void main(String[] args) {
 		int[] arr = {12,4,5,8,9,15};

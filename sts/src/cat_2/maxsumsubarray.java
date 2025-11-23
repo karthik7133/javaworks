@@ -5,6 +5,9 @@ public class maxsumsubarray {
 	public static void main(String[] args) {
 	     //no of sub arrays n(n+1)/2;
 		//time O(n);space O(1);
+		//which makes it difficult is -VE nums and zero included makes it difficult.
+		//pref prod==0 or suff==0 we change pref prod =1.
+	
 	     int n=x.nextInt();
 	     int a[]= new int [n];
 	     for(int i=0;i<n;i++)a[i]=x.nextInt();

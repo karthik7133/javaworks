@@ -1,5 +1,8 @@
 package cat_2;
 //max equilibrium sum
+//definition pref prod == suff prod;
+//i/p array=> max eq sum or eq index;
+//time and space;
 import java.util.*;
 public class Maxequilibriumsum {
 	public static void main(String[] args) {
