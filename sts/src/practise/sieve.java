@@ -13,7 +13,7 @@ public class sieve {
 				}
 			}
 		}
-		for(int i=0;i<=ul;i++) {
+		for(int i=2;i<=ul;i++) {
 			if(!b[i] && i>1)System.out.println(i);
 		}
 	}
