@@ -5,7 +5,6 @@ public class wtsubstring {
 		Scanner x =new Scanner(System.in);
 		String  s1=x.next();
 		String s2=x.next();
-		x.nextLine();
 		int k=x.nextInt();
 		int n=s1.length();
 		wtstring(s1,s2,k,n);
@@ -21,6 +20,9 @@ public class wtsubstring {
 				if(sum<=k)hs.add(s);
 				else break;
 			}
+		}
+		for(String m:hs) {
+			System.out.print(m+" ");
 		}
 	}
 }
