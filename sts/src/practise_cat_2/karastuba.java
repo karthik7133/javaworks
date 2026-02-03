@@ -17,7 +17,7 @@ public class karastuba {
 		long s1=k(a,c);
 		long s2=k(b,d);
 		long s3=k(a+b,c+d)-s1-s2;
-		long s4=(long)(s2+s1*Math.pow(10, 2*l1)+s2*Math.pow(10, l1));
+		long s4=(long)(s2+s1*Math.pow(10, 2*l1)+s3*Math.pow(10, l1));
 		return s4;
 	}
 
