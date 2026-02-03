@@ -11,8 +11,7 @@ public class comb {
 		if(current.length()==n) {
 			System.out.println(current);return;
 		}
-		for(int i=k;i<s.length();i++) 
+		for(int i=k;i<s.length();i++)
 		c(s,i+1,current+s.charAt(i),n);
-		
 	}
 }
