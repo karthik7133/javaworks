@@ -3,7 +3,6 @@ import java.util.*;
 //x=2 mod 5 x=1 mod 7 x=22 or modular inverse or M value
 //t.c and s.c
 //modulo arithmetic usage or application of crt(purpose).
-//
 public class crt {
 	public static void main(String[] args) {
 		Scanner x =new Scanner(System.in);
