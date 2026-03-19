@@ -2,7 +2,18 @@ package cat_2;
 import java.util.*;
 public class Bellmanalg {
 	public static void main(String[] args) {
-		
+		Scanner x = new Scanner(System.in);
+		int v =x.nextInt();
+		int e = x.nextInt();
+		List<List<Integer>>adj= new ArrayList<>();
+		for(int i=0;i<e;i++) {
+			int s=x.nextInt();
+			int d=x.nextInt();
+			int w=x.nextInt();
+			adj.add(Arrays.asList(s,d,w));
+		}
+		int s=x.nextInt();
+		bell(adj,v,s);
 	}
 	static void bell(List<List<Integer>>adj,int v,int s) {
 		int d[] = new int[v];
