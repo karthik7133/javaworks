@@ -18,7 +18,7 @@ public class maxheap {
 			int t=a[i];
 			a[i]=a[0];
 			a[0]=t;
-			heapfy(a,n,0);
+			heapfy(a,i,0);
 		}
 	}
 	static void heapfy(int a[],int n,int l) {
