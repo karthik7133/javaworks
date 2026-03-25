@@ -11,17 +11,18 @@ public class Kahnsalg {
                 indeg[nb]++;
             }
         }
-        Queue<Integer> q = new ArrayDeque<>();
+        Queue<Integer> q = new LinkedList<>();
         // Add vertices with indegree 0 to queue
         for (int i = 0; i < v; i++) {
             if (indeg[i] == 0) {
                 q.add(i);
             }
         }
+        int ind=0;int a[]=new int[v];
         int cnt = 0;
         while (!q.isEmpty()) {
             int value = q.poll();
-            System.out.print(value + " ");
+            a[ind++]=value;
             cnt++;
             for (int nb : adj.get(value)) {
                 indeg[nb]--;
@@ -32,7 +33,7 @@ public class Kahnsalg {
         }
         if (cnt != v) {
             System.out.println("\nGraph has a cycle!");
-        }
+        }else System.out.println(Arrays.toString(a));
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

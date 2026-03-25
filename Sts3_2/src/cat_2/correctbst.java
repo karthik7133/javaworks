@@ -1,25 +1,16 @@
 package cat_2;
-
 import java.util.*;
-
 public class correctbst {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-
 	    int n = sc.nextInt();
 	    String[] arr = new String[n];
-
 	    for(int i=0;i<n;i++) arr[i] = sc.next();
-
 	    correctbst obj = new correctbst();
-
 	    Node root = obj.insertdata(arr);
-
 	    obj.crtbst(root);
-
 	    obj.print(root);
 	}
-	
 	static Node prev,first,last,middle;
 	void crtbst(Node root) {
 		prev=first=last=middle=null;
@@ -70,7 +61,6 @@ public class correctbst {
 		}
 		return root;
 	}
-	
 }
 class Node{
 	Node right,left;
