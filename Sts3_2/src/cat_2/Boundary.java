@@ -47,7 +47,7 @@ public class Boundary {
 	}
 	static void right(Node n) {
 		if(n==null || (n.left==null && n.right==null))return;
-		if(n.left==null) {
+		if(n.right!=null) {
 			right(n.right);
 		}else right(n.left);
 		System.out.println(n.data);
