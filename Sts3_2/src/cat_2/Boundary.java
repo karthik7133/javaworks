@@ -31,7 +31,7 @@ public class Boundary {
 		return root;
 	}
 	static void left(Node n) {
-		if(n==null || (n.left==null || n.right==null) )return;
+		if(n==null || (n.left==null && n.right==null) )return;
 		System.out.println(n.data);
 		if(n.left!=null) {
 			left(n.left);
