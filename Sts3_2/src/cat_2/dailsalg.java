@@ -87,5 +87,6 @@ public class dailsalg {
         dial(adj, start, W, v);
 
         sc.close();
+        
     }
 }
