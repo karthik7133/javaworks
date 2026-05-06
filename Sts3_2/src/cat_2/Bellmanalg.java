@@ -18,7 +18,7 @@ public class Bellmanalg {
 	static void bell(List<List<Integer>>adj,int v,int s) {
 		int d[] = new int[v];
 		Arrays.fill(d, Integer.MAX_VALUE);
-		d[s]=0;
+		d[s]=0;													
 		for(int i=1;i<v;i++) {
 			for(List<Integer>a:adj) {
 				int src=a.get(0),dest=a.get(1),w=a.get(2);

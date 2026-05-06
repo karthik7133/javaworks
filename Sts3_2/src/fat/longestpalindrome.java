@@ -4,7 +4,7 @@ public class longestpalindrome {
 	static int dp[][];
 	public static void main(String[] args) {
 		Scanner x = new Scanner(System.in);
-		String s ="aabbaa";
+		String s ="karthik";
 		dp=new int [s.length()+1][s.length()+1];
 		for(int r[]:dp)Arrays.fill(r, -1);
 		System.out.println(lps(s,0,s.length()-1));

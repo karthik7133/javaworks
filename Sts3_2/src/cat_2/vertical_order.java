@@ -28,11 +28,11 @@ public class vertical_order {
 	}
 	static Node insert(String s[]) {
 		int l=s.length;
-		if(l==0 || !s[0].equals("null"))return null;
+		if(l==0 || s[0].equals("null"))return null;
 		Node r=new Node(Integer.parseInt(s[0]));
 		Queue<Node>q = new LinkedList<>();
 		q.add(r);
-		int i=0;
+		int i=1;
 		while(i<l && !q.isEmpty()) {
 			Node cur=q.poll();
 			if(i<l && !s[i].equals("null")) {

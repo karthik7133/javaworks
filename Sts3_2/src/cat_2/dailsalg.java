@@ -50,7 +50,7 @@ public class dailsalg {
             }
         }
 
-        for (int i = 0; i < v; i++) {
+        for (int i = 0; i < v; i++) {	
             System.out.println("Distance to " + i + " = " + dist[i]);
         }
     }

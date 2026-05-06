@@ -3,7 +3,7 @@ import java.util.*;
 public class longsequence {
 	static int dp[][];
 	public static void main(String[] args) {
-		String a="ka",b="akka";
+		String a="karthik",b="arthik";
 		dp=new int[a.length()+1][b.length()+1];
 		for(int row[]:dp) {
 		Arrays.fill(row, -1);}
