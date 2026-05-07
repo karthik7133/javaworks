@@ -3,27 +3,31 @@ import java.util.*;
 public class vertical_order {
 	public static void main(String[] args) {
 		Scanner x = new Scanner(System.in);
-		int n=x.nextInt();
-		String s[] = new String[n];
-		insert(s);
+		String s[] = x.nextLine().split(" ");
+		vot(insert(s));
 	}
 	static void vot(Node r) {
 		if(r==null)return;
-		TreeMap<Integer,List<Integer>>map=new TreeMap<>();
+		TreeMap<Integer,Integer>map=new TreeMap<>();
 		Queue<pair> q = new LinkedList<>();
 		q.add(new pair(r,0));
 		while(!q.isEmpty()) {
 			pair p=q.poll();
 			Node n=p.node;
 			int hd=p.hd;
-			map.putIfAbsent(hd, new ArrayList<>());
-			map.get(hd).add(n.data);
+			if(!map.containsKey(hd)){
+	            map.put(hd,n.data);
+	        }
 			
 			if(n.left!=null) {
 				q.add(new pair(n.left,hd-1));
 			}
 			if(n.right!=null)q.add(new pair(n.right,hd+1));
 		}
+		for(int x:map.values()) {
+			System.out.println(x);
+		}
+		
 		
 	}
 	static Node insert(String s[]) {
