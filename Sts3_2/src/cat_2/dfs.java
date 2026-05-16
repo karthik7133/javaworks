@@ -16,17 +16,14 @@ public class dfs {
 			adj.get(s).add(d);
 			adj.get(d).add(s);
 		}
-		int start=x.nextInt();
-		dfs(adj,start,v);
-	}
-	static void dfs(List<List<Integer>>adj,int s,int v) {
-		boolean b[] = new boolean[v];
-		b[s]=true;
-		System.out.println(s);
-		for(int nb:adj.get(s)) {
-			if(!b[nb]) {
-				dfs(adj,nb,v);
-			}
-		}
-	}
+		 boolean b[]= new boolean [v];
+	        dfs(adj,b,0);
+	    }
+	    static void dfs(List<List<Integer>> adj,boolean[] b,int src){
+	        b[src]=true;
+	        System.out.print(src+" ");
+	        for(int nb:adj.get(src)){
+	            if(!b[nb]){dfs(adj,b,nb);}
+	        }
+	    }
 }

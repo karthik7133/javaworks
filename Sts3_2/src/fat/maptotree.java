@@ -7,6 +7,7 @@ public class maptotree {
 		m.put("keerthi", 90);
 		m.put("krithika", 100);
 		m.put("Namandeep", 20);
+		System.out.println(m+"\n");
 		TreeMap<String ,Integer>t= new TreeMap<>(m);
 		
 		for(Map.Entry<String ,Integer>e:t.entrySet()) {
