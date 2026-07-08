@@ -19,6 +19,7 @@ public class celebrity {
 			if(i!=c) {
 				if(knows[c][i] || !knows[i][c])return -1;
 			}
-		}return c;
+		}
+		return c;
 	}
 }
